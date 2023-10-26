@@ -5,7 +5,8 @@
 # = variables ================================================================ #
 
 
-wd <- "" # CHANGE THIS TO THE PROJECT PATH
+#setwd() # CHANGE THIS TO THE PROJECT PATH
+cross_url <- url("https://www.dropbox.com/scl/fi/o4rnvbd6b1n0kd5ctbm6m/f8_meth_hypo_cross.Rdata?rlkey=aozwijnieg196alubm68uq01k&dl=1")
 
 # only keep QTL w/ lod > 3, thresholds are appiled later
 thrSex <- 3
@@ -95,11 +96,7 @@ calc.probabilites <- function(d, minprob) {
 # = code ===================================================================== #
 
 # load datasets
-#load(paste0(wd, "rdata/f8_meth_hypo_cross.Rdata")) # 1050176 phenotypes
-cross_url <- url("f8_meth_hypo_cross.Rdata")
-
 load(cross_url)
-close(cross_url)
 
 # Subdivided between 20 runs
 phenos <- colnames(cross$pheno)
@@ -248,5 +245,5 @@ for (i in seq_along(phenos)){
 d <- Reduce(function(x, y) rbind(x, y), l1)
 
 name <- paste0("methQTL_scan", num, ".Rds")
-filename <- file.path(wd, "data", name)
+filename <- file.path("data", name)
 saveRDS(d, file = filename)

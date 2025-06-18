@@ -1,3 +1,13 @@
+# This repository has moved
+
+This repository has been moved! You can now find it here:
+
+### https://github.com/andreyhgl/QTL-analysis
+
+// Andrey 2025-06-18
+
+---
+
 # Project summary
 
 DNA methylation QTL (methQTL) mapping of the sex chromosome of a chicken population based on 124 individuals. DNA methylation was measured with MeDIP-seq. Method for producing the samples can be found [here](https://doi.org/10.1038/s41559-020-01310-1). The code supplied will calculate and map QTL, filter based lod-score threshold (based on permutation tests), remove outliers and produce a table (`data/mQTL_table1.0.xlsx`, `data/f8_mqtl_table_chrz.csv`) and boxplots (`img/mQTL_plots1.0.pdf`)
